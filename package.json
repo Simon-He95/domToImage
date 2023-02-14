@@ -1,5 +1,5 @@
 {
-  "name": "domToImage",
+  "name": "@simon_he/domtoimage",
   "version": "0.0.2",
   "packageManager": "pnpm@7.18.2",
   "description": "domToImage",
