@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
+import { VividTyping } from 'vivid-typing'
 import routes from 'virtual:generated-pages'
 import App from './App.vue'
 import '@unocss/reset/tailwind.css'
@@ -12,4 +13,5 @@ const router = createRouter({
   routes,
 })
 app.use(router)
+app.component('VividTyping', VividTyping)
 app.mount('#app')

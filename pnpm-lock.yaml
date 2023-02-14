@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@antfu/eslint-config': ^0.34.0
+      '@types/dom-to-image': ^2.6.4
       '@types/node': ^18.0.0
       '@vitejs/plugin-vue': ^3.1.2
       '@vueuse/core': ^9.0.0
@@ -13,7 +14,7 @@ importers:
       element-plus: ^2.2.30
       eslint: ^8.26.0
       eslint-plugin-n: ^15.3.0
-      lazy-js-utils: ^0.0.29
+      lazy-js-utils: ^0.0.32
       lint-staged: ^13.1.0
       picocolors: ^1.0.0
       prettier: ^2.8.1
@@ -23,6 +24,7 @@ importers:
       typescript: ^4.8.4
       vite: ^4.0.0
       vitest: ^0.28.0
+      vivid-typing: ^1.1.32
       vue: ^3.2.41
     dependencies:
       '@vueuse/core': 9.7.0_vue@3.2.41
@@ -30,13 +32,14 @@ importers:
       vue: 3.2.41
     devDependencies:
       '@antfu/eslint-config': 0.34.0_wyqvi574yv7oiwfeinomdzmc3m
+      '@types/dom-to-image': 2.6.4
       '@types/node': 18.11.16
       '@vitejs/plugin-vue': 3.2.0_vite@4.0.1+vue@3.2.41
       bumpp: 8.2.1
       element-plus: 2.2.30_vue@3.2.41
       eslint: 8.26.0
       eslint-plugin-n: 15.3.0_eslint@8.26.0
-      lazy-js-utils: 0.0.29_typescript@4.8.4
+      lazy-js-utils: 0.0.32_typescript@4.8.4
       lint-staged: 13.1.0
       picocolors: 1.0.0
       prettier: 2.8.1
@@ -46,6 +49,7 @@ importers:
       typescript: 4.8.4
       vite: 4.0.1_@types+node@18.11.16
       vitest: 0.28.5
+      vivid-typing: 1.1.32_l7r24p6nevbtlimqmqcwa3ouhu
 
   playground:
     specifiers:
@@ -783,6 +787,10 @@ packages:
     resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
     dependencies:
       '@types/ms': 0.7.31
+    dev: true
+
+  /@types/dom-to-image/2.6.4:
+    resolution: {integrity: sha512-UddUdGF1qulrSDulkz3K2Ypq527MR6ixlgAzqLbxSiQ0icx0XDlIV+h4+edmjq/1dqn0KgN0xGSe1kI9t+vGuw==}
     dev: true
 
   /@types/estree/1.0.0:
@@ -4048,8 +4056,26 @@ packages:
     resolution: {integrity: sha512-dLkz37Ab97HWMx9KTes3Tbi3D1ln9fCAy2zr2YVExJasDRPGRaKcoE4fycWNtnCAJfjFqe0cnY+f8KT2JePEXQ==}
     dev: true
 
-  /lazy-js-utils/0.0.29_typescript@4.8.4:
-    resolution: {integrity: sha512-xCK+vNHyLnBF3s41U4HlDlAFa/9A6bzIwdieMewezN8JJMAHh1Dsd3RW3/0Bb/LapCA4+XyAFk9Fl1QCbXShHg==}
+  /lazy-js-utils/0.0.30_typescript@4.8.4:
+    resolution: {integrity: sha512-lTI9mXYqolh5kk1g1UZfcHOzHbLy5a0T8KcYdboc4bD6BeL3foY3mZqNL+VleIU5MHXH2FM0phLpxPPLO9KPVg==}
+    dependencies:
+      '@vueuse/core': 8.9.4_vue@3.2.41
+      htmlparser2: 8.0.1
+      qrcode: 1.5.1
+      spark-md5: 3.0.2
+      tsup: 6.5.0_typescript@4.8.4
+      vue: 3.2.41
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@vue/composition-api'
+      - postcss
+      - supports-color
+      - ts-node
+      - typescript
+    dev: true
+
+  /lazy-js-utils/0.0.32_typescript@4.8.4:
+    resolution: {integrity: sha512-maR0SHl8r0ZQPoKmRgDXSpzdbpfpyZ8k7BheKepfZxBFxmJ+pSgF5q2fK1TdiCa9dQ4V1VQz2wyTI34ZesYY/w==}
     dependencies:
       '@vueuse/core': 8.9.4_vue@3.2.41
       htmlparser2: 8.0.1
@@ -5800,6 +5826,21 @@ packages:
       - sugarss
       - supports-color
       - terser
+    dev: true
+
+  /vivid-typing/1.1.32_l7r24p6nevbtlimqmqcwa3ouhu:
+    resolution: {integrity: sha512-NzJBiQqJardCr5sYIGvsg/H6eh5NpohZa+e9p1dEJ1jZXZsfqO7GmWy30xO7VYcb6oHkKYpPu4vZMHPda0y3tA==}
+    dependencies:
+      '@vueuse/core': 8.9.4_vue@3.2.41
+      lazy-js-utils: 0.0.30_typescript@4.8.4
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@vue/composition-api'
+      - postcss
+      - supports-color
+      - ts-node
+      - typescript
+      - vue
     dev: true
 
   /vue-demi/0.13.11_vue@3.2.36:

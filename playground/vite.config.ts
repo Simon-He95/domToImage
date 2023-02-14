@@ -14,6 +14,7 @@ export default defineConfig({
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
     },
+    dedupe: ['vue'],
   },
   plugins: [
     Vue({
@@ -25,12 +26,7 @@ export default defineConfig({
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
-      imports: [
-        'vue',
-        'vue/macros',
-        'vue-router',
-        '@vueuse/core',
-      ],
+      imports: ['vue', 'vue/macros', 'vue-router', '@vueuse/core'],
       dts: true,
     }),
 

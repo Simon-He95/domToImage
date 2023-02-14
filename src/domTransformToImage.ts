@@ -1,8 +1,11 @@
 import domtoimage from 'dom-to-image'
 import { download } from 'lazy-js-utils'
+import type { IdomTransformToImage } from './types'
 
-type IdomTransformToImage = 'jpeg' | 'blob' | 'png' | 'svg' | 'pixel'
-export function domTransformToImage(el: HTMLElement, type: IdomTransformToImage = 'png') {
+export function domTransformToImage(
+  el: HTMLElement,
+  type: IdomTransformToImage = 'png',
+) {
   const map = {
     jpeg: 'toJpeg',
     blob: 'toBlob',
@@ -10,5 +13,5 @@ export function domTransformToImage(el: HTMLElement, type: IdomTransformToImage 
     svg: 'toSvg',
     pixel: 'toPixelData',
   }
-  domtoimage[map[type]](el).then(download)
+  ;(domtoimage as any)[map[type]](el).then(download)
 }

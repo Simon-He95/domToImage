@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { addStyle } from 'lazy-js-utils'
 import { domTransformToImage } from '../../../src'
 
 const wrapper = ref()
@@ -9,29 +10,43 @@ const download = (type: any) => {
 }
 let effect: any
 const vdata = 'data-v-domtoimage'
-const reg = /\.*(\w+)[\s.>+\w]*{/gm
-const addStyle = (content: string) => {
-  const style = document.createElement('style')
-  style.type = 'text/css'
-  content = content.replace(reg, (v, k) => v.replace(k, `${k}[${vdata}]`))
-  style.innerHTML = content
-  document.head.appendChild(style)
-  return () => document.head.removeChild(style)
-}
-watch(innerClass, async (v) => {
-  if (effect)
-    effect()
-  effect = addStyle(v)
-})
+
+watch(
+  innerClass,
+  async (v) => {
+    if (effect)
+      effect()
+    effect = addStyle(v, vdata)
+  },
+  {
+    immediate: true,
+  },
+)
 </script>
 
 <template>
   <div flex="~ gap-4" justify-center mb4>
-    <textarea v-model="inner" placeholder="html" border-1 border-gray border-rd-1 cols="50" rows="10" />
-    <textarea v-model="innerClass" placeholder="style" border-1 border-gray border-rd-1 cols="50" rows="10" />
+    <textarea
+      v-model="inner"
+      placeholder="html"
+      border-1
+      border-gray
+      border-rd-1
+      cols="50"
+      rows="10"
+    />
+    <textarea
+      v-model="innerClass"
+      placeholder="style"
+      border-1
+      border-gray
+      border-rd-1
+      cols="50"
+      rows="10"
+    />
   </div>
   <div flex="~ gap3" justify-center mb-4>
-    <button btn @click="download('png')">
+    --------<button btn @click="download('png')">
       toPNG
     </button>
     <button btn @click="download('jpeg')">
@@ -45,10 +60,11 @@ watch(innerClass, async (v) => {
     </button>
     <button btn @click="download('pixel')">
       toPIXEL
-    </button>
+    </button>--------
   </div>
-  <div ref="wrapper" data-v-domtoimage v-html="inner" />
+  <div border-1 border-light bg-dark-400:100 max-h-200 min-h-50 text-left p4>
+    <div ref="wrapper" data-v-domtoimage v-html="inner" />
+  </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
