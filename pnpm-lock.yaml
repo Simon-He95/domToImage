@@ -14,7 +14,7 @@ importers:
       element-plus: ^2.2.30
       eslint: ^8.26.0
       eslint-plugin-n: ^15.3.0
-      lazy-js-utils: ^0.0.32
+      lazy-js-utils: ^0.0.39
       lint-staged: ^13.1.0
       picocolors: ^1.0.0
       prettier: ^2.8.1
@@ -39,7 +39,7 @@ importers:
       element-plus: 2.2.30_vue@3.2.41
       eslint: 8.26.0
       eslint-plugin-n: 15.3.0_eslint@8.26.0
-      lazy-js-utils: 0.0.32_typescript@4.8.4
+      lazy-js-utils: 0.0.39_vue@3.2.41
       lint-staged: 13.1.0
       picocolors: 1.0.0
       prettier: 2.8.1
@@ -4074,22 +4074,24 @@ packages:
       - typescript
     dev: true
 
-  /lazy-js-utils/0.0.32_typescript@4.8.4:
-    resolution: {integrity: sha512-maR0SHl8r0ZQPoKmRgDXSpzdbpfpyZ8k7BheKepfZxBFxmJ+pSgF5q2fK1TdiCa9dQ4V1VQz2wyTI34ZesYY/w==}
+  /lazy-js-utils/0.0.37_vue@3.2.41:
+    resolution: {integrity: sha512-kr6ehqgZmUDkBFUdFaOby43wZ/fdUODJVDRY4v0ZlGoTKTXZ/huea8Mu9LA2ThSt11URObpE+DMWS+IHBtKW2w==}
+    peerDependencies:
+      vue: ^3.2.41
     dependencies:
-      '@vueuse/core': 8.9.4_vue@3.2.41
+      vue: 3.2.41
+    dev: true
+
+  /lazy-js-utils/0.0.39_vue@3.2.41:
+    resolution: {integrity: sha512-QSpgcSIU/r4SzawlicNTt4uN5e0aRY2hhRl/tIOdOZ5Y/tfhsf1Hl7eBDcHHVdHSOxstaZDe14xDcLuRs93Jpg==}
+    peerDependencies:
+      vue: ^3.2.41
+    dependencies:
       htmlparser2: 8.0.1
+      lazy-js-utils: 0.0.37_vue@3.2.41
       qrcode: 1.5.1
       spark-md5: 3.0.2
-      tsup: 6.5.0_typescript@4.8.4
       vue: 3.2.41
-    transitivePeerDependencies:
-      - '@swc/core'
-      - '@vue/composition-api'
-      - postcss
-      - supports-color
-      - ts-node
-      - typescript
     dev: true
 
   /levn/0.3.0:
