@@ -72,7 +72,7 @@
     "element-plus": "^2.2.30",
     "eslint": "^8.26.0",
     "eslint-plugin-n": "^15.3.0",
-    "lazy-js-utils": "^0.0.32",
+    "lazy-js-utils": "^0.0.39",
     "lint-staged": "^13.1.0",
     "picocolors": "^1.0.0",
     "prettier": "^2.8.1",
