@@ -22,25 +22,35 @@ watch(
     immediate: true,
   },
 )
+
+const paste = async () => {
+  const content = await window.navigator.clipboard.readText()
+  if (content)
+    inner.value = content
+}
+onMounted(paste)
 </script>
 
 <template>
-  <div flex="~ gap-4" justify-center mb4>
+  <div flex="~ gap-4" justify-center mb4 items-center>
     <textarea
       v-model="inner"
       placeholder="html"
       border-1
       border-gray
       border-rd-1
+      p-2
       cols="50"
       rows="10"
     />
+    <button i-carbon-paste @click="paste" />
     <textarea
       v-model="innerClass"
       placeholder="style"
       border-1
       border-gray
       border-rd-1
+      p-2
       cols="50"
       rows="10"
     />
