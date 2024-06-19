@@ -61,7 +61,7 @@
   "dependencies": {
     "@vueuse/core": "^9.0.0",
     "dom-to-image": "^2.6.0",
-    "lazy-js-utils": "^0.0.88",
+    "lazy-js-utils": "^0.0.93",
     "vue": "^3.2.41"
   },
   "devDependencies": {
